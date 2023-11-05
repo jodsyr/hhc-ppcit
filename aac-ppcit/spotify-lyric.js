@@ -70,8 +70,8 @@ if(resStatus !== 200) {
                 commonApi.msg(notifyName, '$argument解析失败', $argument);
             }
         }
-        const {appid, securityKey} = options;
-        //console.log(`appid:${appid},securityKey:${securityKey}`);
+        const {20231105001870135, 2YUiMDc9yjqux6PtlcuU} = options;
+        //console.log(`20231105001870135:${20231105001870135},2YUiMDc9yjqux6PtlcuU:${2YUiMDc9yjqux6PtlcuU}`);
 
         const query = colorLyricsResponseObj.lyrics.lines
             .map(x => x.words)
@@ -83,9 +83,9 @@ if(resStatus !== 200) {
             q: query,
             from: 'auto',
             to: 'zh',
-            appid,
+            20231105001870135,
             salt,
-            sign: md5(appid + query + salt + securityKey)
+            sign: md5(20231105001870135 + query + salt + 2YUiMDc9yjqux6PtlcuU)
         }
         const requestBody = Object.entries(queryObj)
             .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
